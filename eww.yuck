@@ -1,0 +1,9 @@
+(define bar
+  (defwidget cpu-frequency
+    (let [frequency (get-cpu-frequency)]
+      ;; Changing font color based on CPU frequency
+      (if (> frequency 2.5)
+        (set! font-color "#FF0000") ; High frequency: Red
+        (set! font-color "#00FF00")) ; Normal frequency: Green
+      (label "CPU Frequency: %frequency% GHz"))
+  ))
